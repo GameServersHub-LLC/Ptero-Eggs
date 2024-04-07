@@ -8,7 +8,7 @@
 
 Ports are required to run the server in a table format.
 
-| Port              | Default |
+| Ports             | Default |
 | ----------------- | ------- |
 | Game              | 25000   |
 | Reserved (Game+1) | 25001   |
