@@ -10,8 +10,8 @@
                 <img src="https://avatars.githubusercontent.com/u/49725" width="50px;" alt=""/><br /><sub><b>NHDriver4</b></sub>
             </a>
             <br />
-            <a title="Codes">💻</a>
-            <a title="Maintains">🔨</a>
+            <a href="https://github.com/That411Guy/Ptero-Eggs" title="Codes">💻</a>
+            <a href="https://github.com/That411Guy/Ptero-Eggs" title="Maintains">🔨</a>
         </td>
     </td>
         <td align="center">
@@ -19,8 +19,8 @@
                 <img src="https://avatars.githubusercontent.com/u/100328348" width="50px;" alt=""/><br /><sub><b>That411Guy</b></sub>
             </a>
             <br />
-            <a title="Codes">💻</a>
-            <a title="Maintains">🔨</a>
+            <a href="https://github.com/That411Guy/Ptero-Eggs" title="Codes">💻</a>
+            <a href="https://github.com/That411Guy/Ptero-Eggs" title="Maintains">🔨</a>
         </td>         
     </tr>
 </table>
