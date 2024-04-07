@@ -10,7 +10,8 @@
                 <img src="https://avatars.githubusercontent.com/u/49725" width="50px;" alt=""/><br /><sub><b>NHDriver4</b></sub>
             </a>
             <br />
-            <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Codes">💻</a>
+            <a href="https://github.com/parkervcp/eggs/commits?author=NHDriver4" title="Codes">💻</a>
+            <a href="https://github.com/parkervcp/eggs/commits?author=NHDriver4" title="Maintains">🔨</a>
         </td>
     </td>
         <td align="center">
@@ -19,6 +20,7 @@
             </a>
             <br />
             <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Codes">💻</a>
+            <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Maintains">🔨</a>
         </td>         
     </tr>
 </table>
