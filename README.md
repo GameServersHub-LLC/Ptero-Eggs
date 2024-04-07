@@ -4,14 +4,14 @@ These eggs are made by or for the use of GSH LLC
 ## [Bots](/bots)
 
 
-## [Game Eggs](/game_eggs)
+## [Game Eggs](game_eggs)
 
-### [Path of Titans](/game_eggs/own_games/path_of_titans)
+### [Path of Titans](game_eggs/own_games/path_of_titans)
 
 * 30 Slot Server $20
 * Max Slot Server $50-$70
 
-## [SteamCMD Servers](/steam_eggs)
+## [SteamCMD Servers](game_eggs/steamcmd)
 
 ### [Ark: Survival Ascended](/game_eggs/steamcmd)
 
