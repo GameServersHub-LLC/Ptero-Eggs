@@ -9,7 +9,7 @@
                 <img src="https://avatars.githubusercontent.com/u/116325" width="50px;" alt=""/><br /><sub><b>gOOvER</b></sub>
             </a>
             <br />
-            <a href="https://github.com/parkervcp/eggs/commits?author=gOOvER" title="Codes">💻</a>
+            <a title="Codes">💻</a>
             <a title="Maintains">🔨</a>
         </td>
     </td>
@@ -18,8 +18,8 @@
                 <img src="https://avatars.githubusercontent.com/u/100328348" width="50px;" alt=""/><br /><sub><b>That411Guy</b></sub>
             </a>
             <br />
-            <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Codes">💻</a>
-            <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Maintains">🔨</a>
+            <a title="Codes">💻</a>
+            <a title="Maintains">🔨</a>
         </td>         
     </tr>
 </table>
