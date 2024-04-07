@@ -12,7 +12,7 @@ These eggs are made by or for the use of GSH LLC
 * [30 Slot Server $20](/game_eggs/own_games/path_of_titans/30_slot.json)
 * [Max Slot Server $50-$70](/game_eggs/own_games/path_of_titans/30_slot.json)
 
-## [SteamCMD Servers](/game_eggs/steamcmd)
+## SteamCMD Servers
 
 ### [Ark: Survival Ascended](/game_eggs/steamcmd)
 
