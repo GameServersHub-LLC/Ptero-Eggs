@@ -8,8 +8,8 @@ These eggs are made by or for the use of GSH LLC
 
 ### [Path of Titans](/own_games/path_of_titans)
 
-* [30 Slot Server](/own_games//path_of_tians/30_slot) $20
-* [Max Slot Server](/own_games//path_of_tians/basic_pot) $50-$70
+* [30 Slot Server](/own_games/path_of_tians/30_slot) $20
+* [Max Slot Server](/own_games/path_of_tians/basic_pot) $50-$70
 
 ### [The Isle](/the_isle)
 
