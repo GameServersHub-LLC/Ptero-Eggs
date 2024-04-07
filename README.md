@@ -8,8 +8,8 @@ These eggs are made by or for the use of GSH LLC
 
 ## [Path of Titans](/path_of_titans)
 
-* [30 Slot Server](30_slot)
-* [Normal Path of Titan](basic_pot)
+* [30 Slot Server](30_slot) $20
+* [Max Slot Server](basic_pot) $50-$70
 
 ## [SteamCMD Servers](/steam_eggs)
 
