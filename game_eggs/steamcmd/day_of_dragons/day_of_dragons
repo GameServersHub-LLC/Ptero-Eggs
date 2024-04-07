@@ -1,0 +1,314 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-04-07T02:17:09-04:00",
+    "name": "Day of Dragons",
+    "author": "eggs@goover.dev",
+    "description": "Day of Dragons is an online creature survival game set in a large, beautiful, sandbox open world with multiple biomes and distinct creatures. Rule the world as one of several dragon species, or play as an elemental.",
+    "features": [
+        "steam_disk_space"
+    ],
+    "docker_images": {
+        "ghcr.io\/goover\/steamcmd:debian": "ghcr.io\/goover\/steamcmd:debian"
+    },
+    "file_denylist": [],
+    "startup": ".\/Dragons\/Binaries\/Linux\/DragonsServer-Linux-Shipping -Port={{SERVER_PORT}} -QueryPort={{QUERY_PORT}}  -SteamServerName=\"{{SRV_NAME}}\" -log",
+    "config": {
+        "files": "{\r\n    \"\/Dragons\/Saved\/Config\/LinuxServer\/Game.ini\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"iMaxPlayers\": \"iMaxPlayers={{server.build.env.MAX_PLAYERS}}\",\r\n            \"sServerPassword\": \"sServerPassword={{server.build.env.SRV_PASSWORD}}\",\r\n            \"sServerDiscord\": \"sServerDiscord={{server.build.env.DISCORD}}\",\r\n            \"bRoleplay\": \"bRoleplay={{server.build.env.R_PLAY}}\",\r\n            \"iAutoSaveSeconds\": \"iAutoSaveSeconds={{server.build.env.AUTO_SAVE}}\",\r\n            \"iCorpseDespawnTime\": \"iCorpseDespawnTime={{server.build.env.CORPSE_DESPAWN}}\",\r\n            \"bFlagHatchlingKillers\": \"bFlagHatchlingKillers={{server.build.env.HATCHLING_KILLERS}}\",\r\n            \"iMaxClans\": \"iMaxClans={{server.build.env.MAX_CLANS}}\",\r\n            \"iMaxClanMembers\": \"iMaxClanMembers={{server.build.env.CLAN_MEMBERS}}\",\r\n            \"iGrowthRateMultiplier\": \"iGrowthRateMultiplier={{server.build.env.GROW_RATE}}\",\r\n            \"bEnableGroupDamage\": \"bEnableGroupDamage={{server.build.env.GROUP_DAMAGE}}\",\r\n            \"sServerMOTD\": \"sServerMOTD={{server.build.env.MOTD}}\",\r\n            \"bAlwaysShowAdminTags\": \"bAlwaysShowAdminTags={{server.build.env.ADMIN_TAGS}}\",\r\n            \"bAlwaysShowPlayerTags\": \"bAlwaysShowPlayerTags={{server.build.env.PLAYER_TAGS}}\",\r\n            \"bChatShowClanTags\": \"bChatShowClanTags={{server.build.env.CLAN_TAGS}}\",\r\n            \"bUseFriendsList\": \"bUseFriendsList={{server.build.env.USE_FRIENDS_LIST}}\",\r\n            \"iServerType\": \"iServerType={{server.build.env.SRV_TYPE}}\",\r\n            \"iDailyRestartHour\": \"iDailyRestartHour={{server.build.env.RESTART_HOUR}}\",\r\n            \"bForceNormalizedEggStats\": \"bForceNormalizedEggStats={{server.build.env.EGG_STATS}}\",\r\n            \"bDisableNesting\": \"bDisableNesting={{server.build.env.NO_NEST}}\",\r\n            \"bDisableGrowth\": \"bDisableGrowth={{server.build.env.NO_GROWTH}}\",\r\n            \"bForceSameSpeciesGroups\": \"bForceSameSpeciesGroups={{server.build.env.SAME_SPECIES}}\",\r\n            \"bDisableGlobalChat\": \"bDisableGlobalChat={{server.build.env.NO_GLOBAL_CHAT}}\",\r\n            \"sMap\": \"sMap={{server.build.env.S_MAP}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \" All sub levels loaded!\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# steamcmd Base Installation Script\r\n#\r\nclear\r\nRED='\\033[0;31m'\r\nGREEN='\\033[0;32m'\r\nYELLOW='\\033[1;33m'\r\nBLUE='\\033[0;34m'\r\nNC='\\033[0m'\r\n\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\necho -e \"${YELLOW}Day of Dragons  Installscript${NC}\"\r\necho -e \"${YELLOW}Egg by gOOvER | https:\/\/goover.dev${NC}\"\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\n\r\n#apt -y update\r\n#apt -y --no-install-recommends install curl lib32gcc-s1 ca-certificates jq dos2unix\r\n\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\necho -e \"${YELLOW}download and install steamcmd. please wait...${NC}\"\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\n\r\n## just in case someone removed the defaults.\r\nif [[ \"${STEAM_USER}\" == \"\" ]] || [[ \"${STEAM_PASS}\" == \"\" ]]; then\r\n    echo -e \"steam user is not set.\\n\"\r\n    echo -e \"Using anonymous user.\\n\"\r\n    STEAM_USER=anonymous\r\n    STEAM_PASS=\"\"\r\n    STEAM_AUTH=\"\"\r\nelse\r\n    echo -e \"user set to ${STEAM_USER}\"\r\nfi\r\n\r\n## download and install steamcmd\r\ncd \/tmp\r\nmkdir -p \/mnt\/server\/steamcmd\r\ncurl -sSL -o steamcmd.tar.gz https:\/\/steamcdn-a.akamaihd.net\/client\/installer\/steamcmd_linux.tar.gz\r\ntar -xzvf steamcmd.tar.gz -C \/mnt\/server\/steamcmd\r\nmkdir -p \/mnt\/server\/steamapps # Fix steamcmd disk write error when this folder is missing\r\ncd \/mnt\/server\/steamcmd\r\n\r\n# SteamCMD fails otherwise for some reason, even running as root.\r\n# This is changed at the end of the install process anyways.\r\nchown -R root:root \/mnt\r\nexport HOME=\/mnt\/server\r\necho -e \"${GREEN}..done..${NC}\"\r\n\r\n## install game using steamcmd\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\necho -e \"${YELLOW}install game using steamcmd. please wait...${NC}\"\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\n\r\n.\/steamcmd.sh +force_install_dir \/mnt\/server +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} $( [[ \"${WINDOWS_INSTALL}\" == \"1\" ]] && printf %s '+@sSteamCmdForcePlatformType windows' ) $( [[ \"${STEAM_SDK}\" == \"1\" ]] && printf %s '+app_update 1007' ) +app_update ${SRCDS_APPID} $( [[ -z ${SRCDS_BETAID} ]] || printf %s \"-beta ${SRCDS_BETAID}\" ) $( [[ -z ${SRCDS_BETAPASS} ]] || printf %s \"-betapassword ${SRCDS_BETAPASS}\" ) ${INSTALL_FLAGS} validate +quit\r\necho -e \"${GREEN}..done..${NC}\"\r\n\r\n## set up 32 bit libraries\r\nmkdir -p \/mnt\/server\/.steam\/sdk32\r\ncp -v linux32\/steamclient.so ..\/.steam\/sdk32\/steamclient.so\r\n\r\n## set up 64 bit libraries\r\nmkdir -p \/mnt\/server\/.steam\/sdk64\r\ncp -v linux64\/steamclient.so ..\/.steam\/sdk64\/steamclient.so\r\n\r\n# add below your custom commands if needed\r\n\r\nmkdir -p $HOME\/Dragons\/Saved\/Config\/LinuxServer\r\nFILE=$HOME\/Dragons\/Saved\/Config\/LinuxServer\/Game.ini\r\nif [ -f \"$FILE\" ]; then\r\n  echo -e \"${BLUE}-------------------------------------------------${NC}\"\r\n  echo -e \"${GREEN}Game.ini found.${NC}\"\r\n  echo -e \"${BLUE}-------------------------------------------------${NC}\"\r\nelse  \r\n  echo -e \"${BLUE}-------------------------------------------------${NC}\"\r\n  echo -e \"${RED}No Game.ini found. Downloading default...${NC}\"\r\n  echo -e \"${BLUE}-------------------------------------------------${NC}\"\r\n  cd $HOME\/\/Dragons\/Saved\/Config\/LinuxServer\r\n  curl -sSL -o Game.ini https:\/\/raw.githubusercontent.com\/gOOvER\/own-pterodactyl-eggs\/main\/steamcmd\/day-of-dragos\/Game.ini\r\nfi\r\necho -e \"${GREEN}..done..${NC}\"\r\n\r\n## install end\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"\r\necho -e \"${GREEN}Installation completed...${NC}\"\r\necho -e \"${BLUE}-------------------------------------------------${NC}\"",
+            "container": "ghcr.io\/goover\/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "[GAME] Server Name",
+            "description": "",
+            "env_variable": "SRV_NAME",
+            "default_value": "Hosted by GameServersHub",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:64",
+            "field_type": "text"
+        },
+        {
+            "name": "Max Players",
+            "description": "Set the player cap on the server. We recommend no more than 100 for best performance. Range from 1-200",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "100",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|between:1,200",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Password",
+            "description": "Password can consist of any combination of characters. By default server passwords are disabled allowing admins to access the admin panel by \/admin command. With a password, admins must use \/admin password to access the admin panel.",
+            "env_variable": "SRV_PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:64",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Discord Link",
+            "description": "This is where you would put a link to your discord server. Be sure to include the full url including https:\/\/ and encapsulate it with quotes.",
+            "env_variable": "DISCORD",
+            "default_value": "\"https:\/\/discord.gg\/gsh\"",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:72",
+            "field_type": "text"
+        },
+        {
+            "name": "Role Play",
+            "description": "If True, server browser type will be appended with the RP tag. Used to let players know that players will be expected to roleplay in character. Enables some Roleplay features on servers such as custom names. More features coming in the future.",
+            "env_variable": "R_PLAY",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Auto Save",
+            "description": "Time in seconds between server autosaves.",
+            "env_variable": "AUTO_SAVE",
+            "default_value": "60",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|between:60,3600",
+            "field_type": "text"
+        },
+        {
+            "name": "Corpse Despawn Time",
+            "description": "Determines how long in seconds corpses remain on the server before despawning. Recommend keeping this low on active servers to free up resources.",
+            "env_variable": "CORPSE_DESPAWN",
+            "default_value": "300",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|between:60,86400",
+            "field_type": "text"
+        },
+        {
+            "name": "Flag Hatchling Killers",
+            "description": "If enabled, adult or elder dragons that kill hatchlings will be flagged with red glowing eyes for 20 minutes. Safelog will be unavailable to them while flagged. For servers who want to flag hatchling killers.",
+            "env_variable": "HATCHLING_KILLERS",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Max Clan Members",
+            "description": "Allows servers to limit clan membership size.",
+            "env_variable": "CLAN_MEMBERS",
+            "default_value": "1024",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|between:8,1024",
+            "field_type": "text"
+        },
+        {
+            "name": "Growth Rate Multiplier",
+            "description": "0 = 0.5x slow growth, 1 = 1.0x normal growth, 2 = 1.5x quick growth, 3 = 2.0x fast growth.",
+            "env_variable": "GROW_RATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|in:0,1,2,3",
+            "field_type": "text"
+        },
+        {
+            "name": "Group Damage",
+            "description": "True allows group members to damage each other when grouped.",
+            "env_variable": "GROUP_DAMAGE",
+            "default_value": "True",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Server MOTD",
+            "description": "A message that will be displayed to all players on the server character select screen and must be encapsulated within \"quotes\".",
+            "env_variable": "MOTD",
+            "default_value": "\"Leave your MOTD here\"",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:4096",
+            "field_type": "text"
+        },
+        {
+            "name": "Show Admin Tags",
+            "description": "True forces admin tags to always show to all players on the server. Recommended for servers that want people to easily identify the admins.",
+            "env_variable": "ADMIN_TAGS",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Show Players Tags",
+            "description": "Turning on will always show all player name tags regardless if grouped or clanned. By default nametags only show up on grouped or clanned players.",
+            "env_variable": "PLAYER_TAGS",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Show Clan Tags",
+            "description": "This shows or hides clan tags in the chat box.",
+            "env_variable": "CLAN_TAGS",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Use Friends List",
+            "description": "If enabled, only player steam ids listed below in sServerFriends can join your server. Players that are not in the sServerFriends list will be kicked automatically.",
+            "env_variable": "USE_FRIENDS_LIST",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "[GAME] QueryPort",
+            "description": "",
+            "env_variable": "QUERY_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|integer|between:1024,65536",
+            "field_type": "text"
+        },
+        {
+            "name": "[SYSTEM] Auto Update",
+            "description": "",
+            "env_variable": "AUTO_UPDATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "[SYSTEM] Validate",
+            "description": "",
+            "env_variable": "VALIDATE",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "[STEAM] SRCDS_APPID",
+            "description": "",
+            "env_variable": "SRCDS_APPID",
+            "default_value": "1088320",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Type",
+            "description": "Sets server game type. 0=PvP, 1=PvE, 2=DvE, 3=CvC.\r\nPvP allows all forms of PvP. \r\nPvE disables PvP entirely, and disables Elemental Faction.\r\nDvE allows only Faction PvP. \r\nCvC allows only Faction and Clan PvP.",
+            "env_variable": "SRV_TYPE",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|in:0,1,2,3",
+            "field_type": "text"
+        },
+        {
+            "name": "Daily Restar tHour",
+            "description": "Values of 1-24 will enable the Auto Restart function which will initiate the auto Shutdown procedure at the top of the hour. Hours are in 24 hour format. 12 = Noon. 24 = Midnight. Times are in UTC. Please refer to UTC time conversions to set your restart time properly.",
+            "env_variable": "RESTART_HOUR",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|between:1,24",
+            "field_type": "text"
+        },
+        {
+            "name": "Force Normalized Egg Stats",
+            "description": "If true, all eggs spawn into the game with \u201cE\u201d stats removing the random genetic advantage from players who freshly spawn.",
+            "env_variable": "EGG_STATS",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Disable Nesting",
+            "description": "If true, players will not be able to nest for skins or \"upstat\" on the server.",
+            "env_variable": "NO_NEST",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Disable Growth",
+            "description": "If true then growth is disabled for this server and all eggs spawn adult-sized dragons.",
+            "env_variable": "NO_GROWTH",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Force Same Species Groups",
+            "description": "If true then only dragons of the same species can group together. Does not work on CvC servers.",
+            "env_variable": "SAME_SPECIES",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Disable Global Chat",
+            "description": "If true then non-Admin players are not able to use Global chat.",
+            "env_variable": "NO_GLOBAL_CHAT",
+            "default_value": "False",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:True,False",
+            "field_type": "text"
+        },
+        {
+            "name": "Map",
+            "description": "Sets the server map. Default Map is currently Forgotten Forest in Survival Game Mode. Maps determine GameMode settings. Maps in Survival mode disables Loot, Inventory, Portal travel, and Boss AI encounters. For servers wishing to have a deathmatch map, we have included a pvp arena in the test map.",
+            "env_variable": "S_MAP",
+            "default_value": "SV_Forest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:SV_Forest,test",
+            "field_type": "text"
+        }
+    ]
+}
