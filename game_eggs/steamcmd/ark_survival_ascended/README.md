@@ -4,14 +4,15 @@
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-    </td>  
+     </td>
         <td align="center">
-            <a href="https://github.com/Ballaual">
-                <img src="https://avatars.githubusercontent.com/u/38478976" width="50px;" alt=""/><br /><sub><b>Alexander Ballauf</b></sub>
+            <a href="https://github.com/NHDriver4">
+                <img src="https://avatars.githubusercontent.com/u/100328348" width="50px;" alt=""/><br /><sub><b>NHDriver4</b></sub>
             </a>
             <br />
-            <a href="https://github.com/parkervcp/eggs/commits?author=Ballaual" title="Codes">💻</a>
+            <a href="https://github.com/parkervcp/eggs/commits?author=That411Guy" title="Codes">💻</a>
         </td>
+    </td>
         <td align="center">
             <a href="https://github.com/That411Guy">
                 <img src="https://avatars.githubusercontent.com/u/100328348" width="50px;" alt=""/><br /><sub><b>That411Guy</b></sub>
