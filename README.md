@@ -1,10 +1,10 @@
 # GameServersHub Pterodactyl Eggs repo
 These eggs are made by or for the use of GSH LLC
 
-## [Bots](/bots)
+## Bots
 
 
-## [Game Eggs](/game_eggs)
+## Game Eggs
 
 ### [Path of Titans](/game_eggs/own_games/path_of_titans)
 
@@ -52,7 +52,7 @@ These eggs are made by or for the use of GSH LLC
 * [Max Slot Server $50-$70](/game_eggs/steamcmd/the_isle/basic_the_isle.json)
 
 
-## [Storage](/storage)
+## Storage
 
 ### [S3 Storage](/storage)
 
@@ -62,7 +62,7 @@ These eggs are made by or for the use of GSH LLC
 
 * [SFTP Storage Share](/storage/sftp_storage_share)
 
-## [Software](/software)
+## Software
 
 ### [Forgejo](/software/forgejo)
 
