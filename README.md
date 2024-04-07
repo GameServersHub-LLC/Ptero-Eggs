@@ -14,7 +14,7 @@ These eggs are made by or for the use of GSH LLC
 
 ## SteamCMD Servers
 
-### [Ark: Survival Ascended](/game_eggs/steamcmd)
+### [Ark: Survival Ascended](/game_eggs/steamcmd/ark_survival_ascended)
 
 * [Ark: Survival Ascended](/game_eggs/steamcmd/ark_survival_ascended/basic_asa.json)
 * [Ark: Survival Ascended with API](/game_eggs/steamcmd/ark_survival_ascended/api_asa.json)
@@ -73,3 +73,34 @@ These eggs are made by or for the use of GSH LLC
 
 * [Uptime Kuma](/apps/uptime-kuma/egg-uptime-kuma.json)
 
+
+# Authors / Contributors
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/gOOvER">
+                <img src="https://avatars.githubusercontent.com/u/116325" width="50px;" alt=""/><br /><sub><b>gOOvER</b></sub>
+            </a>
+            <br />
+            <a href="https://github.com/That411Guy/Ptero-Eggs/commits?author=gOOvER" title="Codes">💻</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/That411Guy">
+                <img src="https://avatars.githubusercontent.com/u/100328348" width="50px;" alt=""/><br /><sub><b>That411Guy</b></sub>
+            </a>
+            <br />
+            <a href="https://github.com/That411Guy/Ptero-Eggs/commits?author=That411Guy" title="Codes">💻</a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/NHDriver4">
+                <img src="https://avatars.githubusercontent.com/u/49725" width="50px;" alt=""/><br /><sub><b>NHDriver4</b></sub>
+            </a>
+            <br />
+            <a href="https://github.com/That411Guy/Ptero-Eggs/commits?author=That411Guy" title="Codes">💻</a>
+        </td>         
+    </tr>
+</table>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
