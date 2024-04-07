@@ -1,0 +1,8 @@
+*
+!ShooterGame/Saved/*
+!ShooterGame/Saved/Config/WindowsServer/*
+!ShooterGame/Saved/SaveGames/*
+ShooterGame/Saved/Logs/*
+ShooterGame/Saved/SavedArks/*/*.*bak
+ShooterGame/Saved/SavedArks/*/*.ark
+!ShooterGame/Saved/SavedArks/*/*_WP.ark
