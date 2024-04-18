@@ -40,7 +40,7 @@
         },
         {
             "name": "Server Map",
-            "description": "Available Maps: TheIsland_WP",
+            "description": "Available Maps: TheIsland_WP, ScorchedEarth_WP",
             "env_variable": "SERVER_MAP",
             "default_value": "TheIsland_WP",
             "user_viewable": true,
