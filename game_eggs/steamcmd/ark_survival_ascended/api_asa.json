@@ -50,7 +50,7 @@
         },
         {
             "name": "Server Name",
-            "description": "\\\"Unofficial\\\" dedicated server name",
+            "description": "\"Unofficial\" dedicated server name",
             "env_variable": "SESSION_NAME",
             "default_value": "Hosted by GSH",
             "user_viewable": true,
