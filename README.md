@@ -47,9 +47,9 @@ These eggs are made by or for the use of GSH LLC
 
 * [Satisfactory](/game_eggs/steamcmd/satisfactory/basic_satisfactory.json)
 
-### [Valheim](/game_eggs/steamcmd/Valheim/)
+### [Valheim](/game_eggs/steamcmd/valheim/)
 
-* [Vanilla Valheim](/game_eggs/steamcmd/Valheim/vanilla/egg-valheim-by-g-s-h.json)
+* [Vanilla Valheim](/game_eggs/steamcmd/valheim/vanilla/egg-valheim-by-g-s-h.json)
 
 ### [The Isle](/the_isle)
 
