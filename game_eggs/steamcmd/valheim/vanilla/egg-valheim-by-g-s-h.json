@@ -117,7 +117,7 @@
             "default_value": "disabled",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "string|in:disable,normal,casual,easy,hard,hardcore,immersive,hammer",
+            "rules": "string|in:disabled,normal,casual,easy,hard,hardcore,immersive,hammer",
             "field_type": "text"
         },
         {
