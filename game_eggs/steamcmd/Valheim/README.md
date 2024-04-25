@@ -1,6 +1,11 @@
-### [Valheim](/game_eggs/steamcmd/Valheim/)
+## Server Ports
 
-* [Vanilla Valheim](/game_eggs/steamcmd/Valheim/vanilla/egg-valheim-by-g-s-h.json)
+Ports are required to run the server in a table format.
+
+| Ports             | Default |
+| ----------------- | ------- |
+| Game              | 2456   |
+| Reserved (Game+1) | 2457   |
 
 # Authors / Contributors
 <!-- prettier-ignore-start -->
