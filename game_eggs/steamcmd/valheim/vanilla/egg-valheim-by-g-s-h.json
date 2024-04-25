@@ -52,7 +52,7 @@
         },
         {
             "name": "World Name",
-            "description": "The name of the world to load in the .config/unity3d/IronGate/Valheim folder.",
+            "description": "The name of the world to load in the .config/unity3d/IronGate/Valheim/worlds_local folder.",
             "env_variable": "WORLD",
             "default_value": "Dedicated",
             "user_viewable": true,
