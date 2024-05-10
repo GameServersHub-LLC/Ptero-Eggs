@@ -1,0 +1,8 @@
+# Ignore everything:
+*
+
+# Allowlist of files and directories to be backed up:
+!save-data/*
+
+# Lastly, block things from the allowlist:
+*.TEMP
