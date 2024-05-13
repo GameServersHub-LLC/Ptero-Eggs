@@ -1,0 +1,8 @@
+# Ignore all
+*
+# Except server config file
+!serverconfig.xml 
+# Except server data dir
+!.local/
+# Except logs
+!logs/
