@@ -39,6 +39,16 @@
             "field_type": "text"
         },
         {
+            "name": "Server Password",
+            "description": "You can leave this blank to remove the need for a server password!",
+            "env_variable": "SERVER_PASSWORD",
+            "default_value": "Password123",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:64",
+            "field_type": "text"
+        },
+        {
             "name": "Discord Link",
             "description": "Add your Discord link for players to connect to your Discord server! ****Only add the end of the link example: (https:\/\/discord.gg\/gsh) Only add the gsh part!",
             "env_variable": "DISCORD",
@@ -46,6 +56,16 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:70",
+            "field_type": "text"
+        },
+        {
+            "name": "Player Slots",
+            "description": "Max player slots on the server",
+            "env_variable": "SLOTS",
+            "default_value": "100",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:1|max:200",
             "field_type": "text"
         },
         {
@@ -66,16 +86,6 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:70",
-            "field_type": "text"
-        },
-        {
-            "name": "Server Password",
-            "description": "You can leave this blank to remove the need for a server password!",
-            "env_variable": "SERVER_PASSWORD",
-            "default_value": "Password123",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "nullable|string|max:64",
             "field_type": "text"
         },
         {
@@ -146,16 +156,6 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|boolean",
-            "field_type": "text"
-        },
-        {
-            "name": "Player Slots",
-            "description": "Max player slots on the server",
-            "env_variable": "SLOTS",
-            "default_value": "100",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|integer|min:1|max:200",
             "field_type": "text"
         }
     ]
