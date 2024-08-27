@@ -39,6 +39,16 @@
             "field_type": "text"
         },
         {
+            "name": "Discord Link",
+            "description": "Add your Discord link for players to connect to your Discord server! ****Only add the end of the link example: (https:\/\/discord.gg\/gsh) Only add the gsh part!",
+            "env_variable": "DISCORD",
+            "default_value": "gsh",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:70",
+            "field_type": "text"
+        },
+        {
             "name": "RCON Port",
             "description": "This here is your RCON Port For your bots to use!!!",
             "env_variable": "RCON_PORT",
@@ -53,16 +63,6 @@
             "description": "",
             "env_variable": "RCON_PASSWORD",
             "default_value": "ChangeMe!",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string|max:70",
-            "field_type": "text"
-        },
-        {
-            "name": "Discord Link",
-            "description": "Add your Discord link for players to connect to your Discord server! ****Only add the end of the link example: (https:\/\/discord.gg\/gsh) Only add the gsh part!",
-            "env_variable": "DISCORD",
-            "default_value": "gsh",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:70",
