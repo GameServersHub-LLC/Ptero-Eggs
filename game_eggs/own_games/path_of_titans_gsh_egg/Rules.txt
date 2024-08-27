@@ -1,0 +1,20 @@
+Here is an example of way to edit the font and colors
+
+<title> Maximum font size </>
+<large> Large font size </>
+<small> Small font size </>
+<red> Red font </>
+<orange> Orange font </>
+<yellow> Yellow font </>
+<green> Green font </>
+<blue> Blue font </>
+<purple> Purple font </>
+<white> White font </>
+
+<title>GSH Server RULES</>
+
+<green>Max Pack=6 no mix diets</>
+
+<orange>Be Respectful at all times</>
+
+<large>Thanks, and have fun!</>

@@ -1,0 +1,30 @@
+Here is an example of way to edit the font and colors
+
+<title> Maximum font size </>
+<large> Large font size </>
+<small> Small font size </>
+<red> Red font </>
+<orange> Orange font </>
+<yellow> Yellow font </>
+<green> Green font </>
+<blue> Blue font </>
+<purple> Purple font </>
+<white> White font </>
+
+<title>WELCOME TO GSH Server</><small>restart every 6hrs</>
+
+<green>Official Style Server</>
+<orange>Custom TP locations costs marks to use</>
+<orange>Elder Dinos</>
+<orange>3x Quest Growth/marks</>
+<orange>Very Slow passive Growth</>
+<orange>Modded Dinos</>
+<orange>Banking System</>
+<orange>Skipshed on Quest Completion</>
+
+<blue>Join our Discord click the link bottom left or https://discord.gg/gsh</>
+<green>+</><blue>Future features & Content</>
+<green>+</><blue>Friendly community to play with daily</>
+
+<red>By playing in this server you agree to follow our rules, respect our staff and be friendly. To see our full rules list, please join the discord.</>
+<blue>Use .help in local chat for the commands list, Thanks, and have fun!</>

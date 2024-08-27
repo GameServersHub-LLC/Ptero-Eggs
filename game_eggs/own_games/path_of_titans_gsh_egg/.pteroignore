@@ -1,0 +1,4 @@
+*
+!PathOfTitans/Saved/*.txt
+!PathOfTitans/Saved/DatabaseCache/*
+!PathOfTitans/Saved/Config/*
