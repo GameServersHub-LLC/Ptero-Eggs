@@ -1,0 +1,16 @@
+# Ignore everything by default
+*
+
+# Include important config files and directories
+!serverDZ.cfg
+!mpmissions/*
+!battleye/*
+!serverprofile/*
+!modlist.html
+!*.txt
+
+# Steamcmd files and directories
+steamcmd
+Steam
+docs
+mods
