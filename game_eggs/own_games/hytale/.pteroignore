@@ -1,0 +1,7 @@
+*
+!mods/*
+!universe/*
+!bans.json
+!config.json
+!permissions.json
+!whitelist.json
